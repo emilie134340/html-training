@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="An example of an accessible web page by the BYU-Idaho Accessibility Services Office">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Accessible Web PAge Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="top"></div>
+    <!-- Simulate a smartphone or tablet -->
+    <header>
+            <!--MAKE SURE THIS IS CORRECT FORM!!!-->
+            <a href="#main" class="skip">Skip to main content</a>
+            <nav>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                <div id="myLinks">
+                <a href="#section1">Usability</a>
+                <a href="#section2">WCAG</a>
+                <a href="#section3">Real Text</a>
+                <a href="#section4">Headings</a>
+                <a href="#section5">Tables</a>
+                <a href="#section6">Lists</a>
+                <a href="#section7">Links</a>
+                <a href="#section8">Sensory Characteristics</a>
+                <a href="#section9">Visual Content</a>
+                <a href="#section10">ARIA</a>
+                <a href="#section11">Testing</a>
+                </div>
+            </nav>        
+        
+    </header>
+    <!--THIS IS WHERE THE SKIP LINK NAVIGATES TO-->
+    <main id="main">
+        <h1>Accessible Web Page Example</h1>
+        <p>This is a sample web page to teach HTML accessibility principles.</p>
+        <section id="section1"> 
+            <h2>Usability</h2> 
+                <h3>Skip Links</h3>
+                    <p>Skip links are navigational links that allow users to skip repetitive content and jump to the main content of a web page. These are special links that can be hidden from view but are extremely useful for screen reader users. If you have a complex site, you may want to add more skip links, not only to the main content. (W3)</p>
+                    <p><strong>Can you find the skip link on this page?</strong></p>
+                <h3>Keyboard-Only Navigation</h3>
+                    <p>All interactive elements and content should be fully accessible and operable using a keyboard alone. Well-structured HTML and keyboard-friendly focus styles are necessary. The ability to navigate and interact with all elements should be able to be done without requiring a mouse. </p>
+                    <ul>
+                        <li>Keyboard traps can become a huge issue. They happen when a user gets struck in a particular part of a web page or interface and cannot navigate away using the keyboard. </li>
+                        <li>Test HTML by navigating through the content with the Tab key, highlighting active elements as you go. Reverse direction using Shift + Tab. </li>
+                        <li>Avoid keyboard traps by testing your content and provide keyboard navigation options to escape or continue through the interface.</li>
+                    </ul>
+                    <p><strong>Pause and check:</strong> Is this page operable by just a keyboard? Test it out!</p>
+                <h3>Visible and Predictable Focus</h3>
+                    <p>Clearly visible and predictable keyboard focus indicators are essential. They help users understand where they are in the interface. Customize and style focus indicators to meet user needs while also maintaining a strong contrast with the background.
+                    </p>
+                <h3>External/Embedded Resources</h3>
+                    <p>Any resources such as third-party widgets, videos, or iframes in web content must also be accessible and not compromise the overall usability and user experience.  </p>
+                <h3>Help Information</h3>
+                    <p>Any help information within the web page should be in a consistent location throughout. </p>
+                <h3>Single-Point Operation</h3>
+                    <p>Always provide a single-point gesture for operation of content. Provide controls to achieve the same result as a path based or multipoint gesture.  </p>
+                <h3>Time Limits</h3>
+                    <p>Users should be given adequate time to interact with content wherever possible. If time limits exist, they should be able to be extended or paused. Disabling time limits is better than customizing the length of time limits, which is better than requesting more time before a time limit occurs. (W3)</p>
+                <h3>Character-Only Shortcut Keys</h3>
+                    <p>Do not implement character-only shortcut keys. If absolutely necessary, allow them to be edited.</p>
+                <h3>Pointer Cancellation</h3>
+                    <p>Pointer cancellation should be predictable and consistent throughout the content. </p>
+                    <ul>
+                        <li><span class="monospace"><strong>addEventListener("pointercancel", (event) => {}); onpointercancel = (event) => {};</strong></span></li>
+                        <li>Avoid activating any functions when a down-event is triggered. </li>
+                    </ul>
+                <h3>Status Messages and Errors</h3>
+                    <p>Any status messages and errors are to be implemented programmatically. This means that they are available to the user in text, and the user is notified when they appear. </p>
+                <h3>Memorization and Reuse of Information</h3>
+                    <p>Users should be able to login and complete fields without memorization. The ability to reuse previously entered information should be possible. (Exceptions: re-entering information is essential, the information is required for security of content, or previously entered information is no longer valid.) Information can be:</p>
+                    <ul>
+                        <li>Auto-populated</li>
+                        <li>Available for the user to select</li>
+                    </ul>
+                <h3>Focus Visible</h3>
+                    <p>Any meaningful content should be focusable. </p>
+        </section>
+    
+        <section id="section2">
+            <h2>WCAG</h2>
+            <p>WCAG stands for Web Content Accessibility Guidelines. Our aspects and checklists center around conformance to these guidelines. </p>
+            <h3>Implementing WCAG in HTML</h3>
+                <p>WCAG applies to HTML in the sense that it provides a framework and standards for creating web content that can be used by a wide range of people, including those with disabilities. Refer to our content checklists and the WCAG when creating accessible content.</p>
+        </section>
+    
+        <section id="section3">
+            <h2>Real Text</h2>
+                <h3>Defining Language</h3>
+                        <p>Define the language of the content:</p>
+                        <ul>
+                            <li>Language of page: <span class="monospace"><strong>&lt;html lang=&quot;en&quot;&gt;</strong></span></li>
+                            <li>Language of parts: <span class="monospace"><strong>&lt;p&gt;You'd say that in Chinese as &lt;span lang=&quot;zh-Hans&quot;&gt;<span lang="zh-Hans">数字无障碍</span>&lt;/span&gt;.&lt;/p&gt;</strong></span></li>
+                        </ul>
+                    <h3>Selectable and Accurate Text</h3>
+                        <p>All text should be selectable and accurate. Do not include images of text. Always duplicate the text in surrounding content, if an image of text is essential. </p>
+                        <p>For example, notice how this text is not selectable:</p>
+                        <img src="real_text_example.png" alt="Accessibiltiy is important">
+                        <p>But this example is selectable:</p>
+                        <div class="image-replica"><p>Accessibility is important!</p></div>
+                    <h3>Semantic Elements</h3>
+                        <p>You can make an element look like anything, but semantic elements give meaning to your content and to the users that interact with it. In HTML, the <span class="monospace"><strong>&lt;h1&gt;</strong></span> element is a semantic element, which gives the text it wraps around the role (or meaning) of a top-level heading on your page.</p>
+                        <p>Screen readers can use semantic elements as a signpost to help visually impaired users navigate a page.(MDN) </p>
+        </section>
+    
+        <section id="section4">
+            <h2>Headings</h2>
+                <h3>Descriptive Headings</h3>
+                        <p>Headings should describe the content that follows, making it easier for all users to understand the content's organization.</p>
+                        <p>Heading levels should be nested logically. <span class="monospace"><strong>&lt;h1&gt;</strong></span> representing the main title, followed by <span class="monospace"><strong>&lt;h2&gt;</strong></span> for subsections, <span class="monospace"><strong>&lt;h3&gt;</strong></span> for sub-subsections, and so on. </p>
+                        <p>A consistent and coherent heading structure throughout helps for better accessibility and SEO.</p>
+                    <h3>One Heading Level 1</h3>
+                        <p>There should only be one <span class="monospace"><strong>&lt;h1&gt;</strong></span> per HTML document, serving as the main title or header. Don't use more than one <span class="monospace"><strong>&lt;h1&gt;</strong></span>!</p>
+                    <h3>Accessible Heading Level Example</h3>
+                        <p>This is incorrect:</p>
+                        <div class="monospace">
+                        &lt;h1&gt;<br>
+                        &lt;h1&gt;<br>
+                        &emsp;&lt;h3&gt;<br>
+                        &ensp;&lt;h2&gt;<br>
+                        &ensp;&emsp;&lt;h4&gt;
+                        </div>
+                        <p>This is correct:</p>
+                        <div class="monospace">
+                        &lt;h1&gt;<br>
+                        &ensp;&lt;h2&gt;<br>
+                        &emsp;&lt;h3&gt;<br>
+                        &ensp;&emsp;&lt;h4&gt;<br>
+                        &ensp;&lt;h2&gt;<br>                    
+                        &ensp;&lt;h2&gt;<br>
+                        &emsp;&lt;h3&gt;<br>
+                        </div>
+                
+                    <h3>Metadata</h3>
+                        <p>Metadata elements such as <span class="monospace"><strong>&lt;title&gt;</strong></span> and <span class="monospace"><strong>&lt;meta&gt;</strong></span> can provide essential information about the document's content. They can also improve accessibility and SEO. <span class="monospace"><strong>&lt;meta name="description"&gt;</strong></span> can provide a brief description of the page's content.</p>
+                        <p><strong>Pause and check:</strong> Inspect this page. Are there descriptive metadata elements?</p>
+        </section>
+    
+        <section id="section5">
+            <h2>Tables</h2>
+            <p>Do not create fixed width tables.</p>
+                <h3>Table Captions</h3>
+                    <p>A <span class="monospace"><strong>&lt;caption&gt;</strong></span> element can help describe the table's purpose. They are highly recommended but not required.</p>
+                <h3>Table Headers</h3>
+                    <p>A table in HTML consists of table cells inside rows and columns.</p>
+                    <ul>
+                        <li>Header cells are defined by <span class="monospace"><strong>&lt;th&gt;</strong></span> tags. Column headers should be in the <span class="monospace"><strong>&lt;thead&gt;</strong></span> tag.</li>
+                        <li>Table cells are defined by <span class="monospace"><strong>&lt;td&gt;</strong></span> tags. Table cells and data should be in the <span class="monospace"><strong>&lt;tbody&gt;</strong></span> tag.</li>
+                        <li>Each row starts with a <span class="monospace"><strong>&lt;tr&gt;</strong></span> tag.</li>
+                        <li>Header cells should be visually distinct from data cells. </li>
+                    </ul>
+                <h3>Scope</h3>
+                    <p>Specifying scope in a table can improve the user experience. Scope can be specified to provide necessary information about the cells related to a header.</p>
+                    <p>Header rows can also be defined outside of the <span class="monospace"><strong>&lt;thead&gt;</strong></span> tag. Use <span class="monospace"><strong>&lt;th scope = "row"&gt;</strong></span> instead.</p>
+                <h3>Accessible Simple Table Example</h3>
+                    <h4>Input:</h4>
+                    <div class="monospace">
+                    <p>
+                        &lt;table&gt;<br>
+                        &ensp;&lt;caption&gt;<br>
+                        &emsp;Simple Table Example<br>
+                        &ensp;&emsp;&lt;/caption&gt;<br>
+                        &emsp;&lt;thead&gt;<br>
+                        &ensp;&emsp;&lt;tr&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Whale&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Type&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Habitat&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Whaling History&lt;/th&gt;<br>
+                        &ensp;&emsp;&lt;/tr&gt;<br>
+                        &emsp;&lt;/thead&gt;<br>
+                        &ensp;&lt;tbody&gt;<br>
+                        &emsp;&lt;tr&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Fin Whale&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Baleen&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Open seas&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Recent&lt;/td&gt;<br>
+                        &emsp;&lt;/tr&gt;<br>
+                        &emsp;&lt;tr&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Humpback Whale&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Baleen&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Coastal (in breeding season)&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Ancient&lt;/td&gt;<br>
+                        &emsp;&lt;/tr&gt;<br>
+                        &emsp;&lt;tr&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Killer Whale&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Toothed&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Open seas, coastal&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Occasional&lt;/td&gt;<br>
+                        &emsp;&lt;/tr&gt;<br>
+                        &emsp;&lt;tr&gt;<br>
+                        &emsp;&emsp;&lt;th scope="col"&gt;Sperm Whale&lt;/th&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Toothed&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Open seas&lt;/td&gt;<br>
+                        &emsp;&emsp;&lt;td&gt;Intermediate&lt;/td&gt;<br>
+                        &emsp;&lt;/tr&gt;<br>
+                        &ensp;&lt;/tbody&gt;<br>
+                        &lt;/table&gt;<br>
+                    </p>
+                    </div>
+                    <h4>Output: (border added)</h4>
+                    <div class="table-container">
+                    <table>
+                        <caption>
+                            <strong>Simple Table Example</strong> <!--SOURCE: https://www.researchgate.net/figure/Whale-species-of-the-Mediterranean-Sea-including-those-present-today-and-those-that-may_fig1_285233883-->
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Whale</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Habitat</th>
+                                <th scope="col">Whaling History</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Fin Whale</th>
+                                <td>Baleen</td>
+                                <td>Open seas</td>
+                                <td>Recent</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Humpback Whale</th>
+                                <td>Baleen</td>
+                                <td>Coastal (in breeding season)</td>
+                                <td>Ancient</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Killer Whale</th>
+                                <td>Toothed</td>
+                                <td>Open seas, coastal</td>
+                                <td>Occasional</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sperm Whale</th>
+                                <td>Toothed</td>
+                                <td>Open seas</td>
+                                <td>Intermediate</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+        </section>
+    
+        <section id="section6">
+            <h2>Lists</h2>
+            <p>Lists group related items. Lists are created using list tags and list item tags. There are three types of lists in HTML.</p>
+                <h3>Ordered Lists</h3>
+                    <p>An ordered list is used when order or number of items matters. They start with the <span class="monospace"><strong>&lt;ol&gt;</strong></span> tag. Each list item also starts with the <span class="monospace"><strong>&lt;li&gt;</strong></span> tag. The list items will be marked with numbers by default.</p>
+                    <h4>Ordered List Example</h4>
+                    <h5>Input:</h5>
+                    <div class="monospace">
+                    <p>&lt;p&gt;The top 5 biggest whales in the ocean are:&lt;/p&gt;</p> <!--SOURCE: https://oceanconservancy.org/blog/2021/10/27/top-5-biggest-whales-ocean/-->
+                    <p>
+                        &lt;ol&gt;<br>
+                        &ensp;&lt;li&gt;Blue Whale (100 Feet)&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Fin Whale (90 Feet)&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Sperm Whale (60 Feet)&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;North Atlantic Right Whale (60 Feet)&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Bowhead Whale (59 Feet)&lt;/li&gt;<br>
+                        &lt;/ol&gt;
+                    </p>
+                    </div>
+                    <h5>Output:</h5>
+                    <p>The top 5 biggest whales in the ocean are:</p>
+                    <ol>
+                        <li>Blue Whale (100 Feet)</li>
+                        <li>Fin Whale (90 Feet)</li>
+                        <li>Sperm Whale (60 Feet)</li>
+                        <li>North Atlantic Right Whale (60 Feet)</li>
+                        <li>Bowhead Whale (59 Feet)</li>
+                    </ol>
+            <h3>Unordered Lists</h3>
+                <p>An unordered list starts with the <span class="monospace"><strong>&lt;ul&gt;</strong></span> tag. Each list item starts with the <span class="monospace"><strong>&lt;li&gt;</strong></span> tag. By default, the list items will be marked with bullets. </p>
+                    <h4>Unordered List Example</h4>
+                    <h5>Input:</h5>
+                    <div class="monospace">
+                    <p>&lt;p&gt;Humpback Whale Diet&lt;/p&gt;</p> <!--SOURCE: https://animalia.bio/humpback-whale#:~:text=Diet%20and%20Nutrition,off%20their%20fat%20during%20winter.-->  
+                    <p>
+                        &lt;ul&gt;<br>
+                        &ensp;&lt;li&gt;Krill&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Herring&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Salmon&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Sand Lance&lt;/li&gt;<br>
+                        &ensp;&lt;li&gt;Phytoplankton&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    </div>    
+                    <h5>Output:</h5>
+                    <p>Humpback Whale Diet</p> <!--IS THE TITLE OF THE LIST SUPPOSED TO BE A HEADING LEVEL?-->
+                    <ul>
+                        <li>Krill</li>
+                        <li>Herring</li>
+                        <li>Salmon</li>
+                        <li>Sand Lance</li>
+                        <li>Phytoplankton</li>
+                    </ul>
+            <h3>Definition Lists</h3>
+                <p>A definition lists starts with the <span class="monospace"><strong>&lt;dl&gt;</strong></span> tag. The term in the list is defined with the <span class="monospace"><strong>&lt;dt&gt;</strong></span> tag. The definition is defined with the <span class="monospace"><strong>&lt;dd&gt;</strong></span> tag. </p>
+                <h4>Definition List Example</h4>
+                <h5>Input:</h5>
+                <div class="monospace">
+                <p>&lt;p&gt;Types of Whales&lt;/p&gt;</p>
+                <p>
+                    &lt;dl&gt;<br>
+                    &ensp;&lt;dt&gt;Blue Whale&lt;/dt&gt;<br>
+                    &emsp;&lt;dd&gt;&lt;p&gt;The blue whale is the largest animal on Earth, known for its enormous size and distinctive blue-gray color.&lt;/p&gt;&lt;/dd&gt;<br>
+                    &ensp;&lt;dt&gt;Gray Whale&lt;/dt&gt;<br>
+                    &emsp;&lt;dd&gt;&lt;p&gt;Gray whales are known for their long migrations between their feeding and breeding grounds.&lt;/p&gt;&lt;/dd&gt;<br>
+                    &ensp;&lt;dt&gt;Humpback Whale&lt;/dt&gt;<br>
+                    &emsp;&lt;dd&gt;&lt;p&gt;Humpback whales are known for their acrobatic behavior, often breaching the water and slapping their tails.&lt;/p&gt;&lt;/dd&gt;<br>
+                    &lt;/dl&gt;
+                </p>
+                </div>
+                <h5>Output: (with added emphasis)</h5>
+                <p>Types of Whales</p>
+                <dl>
+                    <dt>
+                        <strong>Blue Whale</strong>
+                    </dt>
+                    <dd>
+                        <p>The blue whale is the largest animal on Earth, known for its enormous size and distinctive blue-gray color.</p>
+                    </dd>
+                    <dt>
+                        <strong>Humpback Whale</strong>
+                    </dt>
+                    <dd>
+                        <p>Humpback whales are known for their acrobatic behavior, often breaching the water and slapping their tails.</p>
+                    </dd>
+                    <dt>
+                        <strong>Gray Whale</strong>
+                    </dt>
+                    <dd>
+                        <p>Gray whales are known for their long migrations between their feeding and breeding grounds.</p>
+                    </dd>
+                </dl>
+        <h3>Mult-Level Lists</h3>
+                <p>Multi-level lists in HTML can get complicated quickly. Don't use more than 3 levels in your lists. If more levels are needed, consider creating an accessible table or breaking your content into more heading levels.</p>
+        </section>
+    
+        <section id="section7">
+            <h2>Links</h2>
+                <h3>Adjacent Links</h3> <!--INCLUDE AN EXAMPLE OF ADJACENT LINKS ON THE PAGE-->
+                    <p>Adjacent links should be grouped as a single link.</p>
+                <h3>Visually Distinct Links</h3>
+                    <p>Links should have descriptive link text and be visually distinct from surrounding text. Never use link text like “Click Here” or “Home Page” because these links are not descriptive. If a link appears multiple times throughout the content, use the same link text every time. </p>
+                <h3>Accessible Link Example</h3>
+                    <p><span class="monospace">&lt;p&gt;I'm creating a link to the &lt;a href="https://www.fisheries.noaa.gov/whales#overview"&gt;NOAA Fisheries Overview of Whales homepage&lt;/a&gt;.</span></p>
+        </section>
+    
+        <section id="section8">
+            <h2>Sensory Characteristics</h2>
+            <p>Examples of sensory characteristics:</p>
+            <ul>
+                <li>Visual Position</li>
+                <li>Sound</li>
+                <li>Color</li>
+                <li>Shape</li>
+                <li>Size</li>
+                <li>Orientation</li>
+            </ul>
+                <h3>Reflow</h3>
+                    <p>Web content should be able to adapt and reorganize itself to fit different screen sizes, orientations, and user settings without requiring horizontal scrolling. Responsive web design provides a better user experience for everyone. </p>
+                    <p>Content should be dynamic and assigned with accessibility in mind. Do not design content with fixed positions and sizes. Dynamic content should be designed with keyboard accessibility, proper focus, and alternative content for screen readers. </p>
+                <h3>Color Contrast</h3> <!--INSERT EXAMPLE OF GOOD/BAD COLOR CONTRAST HERE-->
+                    <p>Color contrast makes content accessible to users with low vision or color vision deficiencies. Use color combinations that are easy to see and differentiate. </p>
+                    <p> Use the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> to check for appropriate color contrast. </p>
+                <h3>Information Independent of Color</h3>
+                    <p>Information conveyed by color alone is inaccessible. Always use more than one sensory characteristic to communicate meaningful information. </p>
+                <h3>Color Contrast Example</h3> <!--MAKE THIS LOOK A LOT BETTER-->
+                    <div class="vc-bad-example">Bad Color Contrast</div><br>
+                    <div class="vc-good-example">Good Color Contrast</div>
+                    <p><strong>Pause and check: </strong>Using the WebAIM contrast checker, what does it say about these color combinations?</p>
+        </section>
+        
+        <section id="section9">
+            <h2>Visual Content</h2>
+            <h3>Alternative Text</h3>
+                    <p>Include descriptive alt text for images and graphics. To create a tooltip for an image, use the <span class="momospace"><strong>title</strong></span> attribute. To mark an image as decorative, leave the <strong>ALT</strong> attribute empty, signaling a screen reader to skip over the image. Example: <span class="monospace">&lt;img src="whale.jpg" alt=“Whale breaching water"&gt;</span></p>
+                    <img src="whale.jpg" alt="Whale breaching water">
+                    <p>Alt text should not be repetitive of surrounding content, nor add additional information.</p>
+                    
+                <h3>Functional Images</h3>
+                    <p>Functional images are used to initiate actions rather than to convey information (W3C). For example, use “Search” rather than “Magnifying lens” or “BYUI Homepage” rather than “BYUI Logo”. </p>
+    
+        </section>
+    
+        <section id="section10">
+            <h2>ARIA</h2>
+                <h3>What is ARIA?</h3>
+                        <p>ARIA stands for Accessible Rich Internet Applications. It is a set of attributes that can be added to HTML elements to improve accessibility, particularly for dynamic and interactive web content.</p>
+                        <p>Don't use ARIA when:</p>
+                        <ul>
+                            <li>Native HTML elements are available
+                                <ul>
+                                    <li>Native HTML elements are designed with accessibility in mind and are more reliable for screen readers and other assistive technologies. Only use ARIA when there is no equivalent native HTML element or attribute that can provide the required accessibility semantics.</li>
+                                    <li>For example, don't use ARIA to make a <span class="monospace"><strong>&lt;div&gt;</strong></span> element behave like a button when you can simply use the <span class="monospace"><strong>&lt;button&gt;</strong></span> element.</li>
+                                    <li>Avoid using roles or attributes that are not relevant to the content or that conflict with native semantics.</li>
+                                </ul>
+                            </li>
+                            <li>You're in an incompatible or unsupported environment
+                                <ul>
+                                    <li>Some environments, like email clients, social media platforms, or certain mobile apps, may not fully support ARIA. When your content will be distributed in such environments, consider alternatives to ARIA for ensuring accessibility.</li>
+                                    <li>If you don't have the means to thoroughly test how your ARIA implementation works with various assistive technologies and screen readers, it's better to rely on native HTML elements and attributes.</li>
+                                </ul>
+                            </li>
+                            <li>There's no user benefit
+                                <ul>
+                                    <li>If adding ARIA does not improve the accessibility or usability of your content for these users, it may be unnecessary.</li>
+                                    <li>Adding ARIA roles or attributes that don't provide meaningful enhancements can lead to confusion and potentially reduce accessibility. ARIA should be used sparingly and with a clear purpose.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>The first rule of ARIA is to <strong>never use it!</strong> ARIA can be complex, especially when used to build custom widgets or interactive components. It's important to thoroughly understand how ARIA works and to carefully test and maintain ARIA-enhanced components. In some cases, it may be more practical to use accessible, pre-built libraries or frameworks that handle ARIA for you.</p>
+                        <!--MAKE BETTTER; ASK SAMMIE WHAT ELSE TO INCLUDE (EXAMPLES, OTHER KEY POINTS, ETC>)-->
+                <h3>ARIA Example</h3>
+                    <p>HTML does not inherently provide a universally accessible element for text box labels. To address this, leveraging ARIA emerges as a valuable solution, enhancing the inclusivity of form interactions by ensuring all users receive clear guidance on the information to input into the form box.</p>
+                    <h4>Input:</h4>
+                        <div class="monospace">
+                            &lt;label for="txtbox"&gt;Enter your first name:&lt;/label&gt;<br>
+                            &lt;input type="text" placeholder="5-digit zipcode" id="txtbox" /&gt;
+                        </div>
+                    <h4>Output:</h4>
+                        <label for="txtbox">Enter your first name:</label>
+                        <input type="text" placeholder="First name test" id="txtbox" />
+
+                <h3>ARIA Roles and Attributes</h3>
+                    <h4>ARIA Roles</h4>
+                        <p>Roles are like “job titles” for elements on a web page. ARIA roles give elements specific roles or identities, helping assistive technologies understand their purpose. Remember to not use ARIA roles if native elements exist. </p>
+                    <h4>ARIA Attributes</h4>
+                        <p>Attributes are like “additional details” that provide more information about elements. They can describe the state, properties, or labels of an element. </p>
+                    <h4>Examples</h4>
+                        <p>For example, an ARIA attribute might indicate if a button is disabled or provide a custom label for an image. They can enhance accessibility by adding extra information. </p>
+        </section>
+    
+        <section id="section11">
+            <h2>Testing</h2>
+            <h3>Manual Testing</h3>
+                    <h4>Keyboard Navigation</h4>
+                        <p>Navigate through your website using only the keyboard, using the <strong>Tab</strong> and the  <strong>Shift + Tab</strong> keys. Make sure you can activate interactive elements with the Enter or Space key (<span class="monospace"><strong>&lt;a&gt;</strong></span> elements cannot be activated with the <strong>Space</strong> key.) Use the up and down keys to navigate between the different options of a <span class="monospace"><strong>&lt;select&gt;</strong></span> element. </p>
+                        <p>Be aware that certain input types have popups that can work differently between browsers. Test your HTML in multiple browsers. For more information, check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input">MDN Input Element page</a>.</p>
+                    <h4>Screen Reader Testing</h4>
+                        <p>Test your HTML with a screen reader, like NVDA, which is available for free. Different screen readers can interact with content in several ways, so make sure to also check out other options like Windows Narrator, VoiceOver, and JAWS. Screen reader users experience content differently. Having your HTML be keyboard navigable is essential. Design with screen reader usage in mind, so the HTML is scannable and skippable, images have accurate and descriptive alt text, and links are descriptive. </p>
+                    <h4>Semantic Structure</h4>
+                        <p>Using semantic elements is crucial for good keyboard navigation. Always use semantic elements. If you remove formatting, does the content still make sense in a logical order?</p>
+                    <h4>Color Contrast</h4>
+                        <p>Test for sufficient color contrast. Use the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a>.</p>
+                    <h4>Alternative Text</h4>
+                        <p>Make sure every image and graphic has alt text or has been marked as decorative. Functional images should have alt text that conveys the function.</p>
+                    <h4>Link Text</h4>
+                        <p>Make sure adjacent links are grouped as a single link. Links that go to the same place have the same descriptive text consistently throughout the content. All links should be visually distinct from surrounding text.</p>
+                <h3>Automatic Testing</h3>
+                    <h4>WAVE Tool</h4>
+                        <p>The Web Accessibility Evaluation Tool can identify many accessibility errors automatically, but a person must still identify issues manually. It is a tool is a free extension you can download for free on Chrome, Firefox, and Edge. Navigate through the information provided to resolve errors and make changes to your HTML. For more information, visit the <a href="https://wave.webaim.org/help">WebAIM WAVE Help page</a>.</p>
+                    <h4>HTML Validators</h4>
+                        <p>An HTML validator can be useful to validate elements for any syntax or formatting errors. Many validators are available for free online. </p>
+                    <h4>Web Developer Extension</h4>
+                        <p>The Web Developer extension is useful as it adds various web developer tools to a browser. The extension is available for Chrome, Edge, Firefox, and Opera. </p>
+        </section>
+        <a href="#top" id="back-to-top">Back to Top</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Emilie Mickelsen lol</p>
+    </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        // JavaScript to show/hide the back-to-top link
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var backToTopButton = document.getElementById("back-to-top");
+
+            // Show the button when the user scrolls down 20px from the top
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        // JavaScript to smoothly scroll to the top when the link is clicked
+        document.getElementById("back-to-top").addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        });
+    </script>
+</body>
+</html>

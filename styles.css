@@ -1,0 +1,204 @@
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(0, 67, 139);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+#back-to-top:hover {
+    opacity: 0.8;
+}
+
+
+
+.myLinks {
+    display: none;
+}
+
+nav {
+    background: rgb(0, 67, 139);
+    margin: 0;
+    position: fixed;
+}
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: white solid 1px; */
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555;
+}    
+/* nav :nth-child(1) {
+    border-top: white solid 1px;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav a.icon {
+    background: rgb(0, 67, 139);
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 9px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+main {
+    padding: 10px;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+/* Container styles */
+.image-replica {
+    width: 300px; /* Adjust the width as needed */
+    height: 150px; /* Half the height of an Instagram post */
+    background-color: #ffffff; /* Background color */
+    /* border: 1px solid #ccc; /* Border for visual separation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Choose an appropriate font */
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #333; /* Text color */
+}
+
+/* Define a class for the specific font */
+.monospace {
+    font-family: 'Courier New', monospace;
+}
+
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    th, td {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+.vc-bad-example {
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px;
+    height: 50px;
+    width: 100px;
+    background-color: #022e58;
+    color: #03437F;
+}
+
+.vc-good-example{
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px 5px;
+    height: 50px;
+    width: 100px;
+    background-color: #03437F;
+    color: #FFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Ensures proportional scaling */
+    display: block; /* Removes extra space below inline images */
+    /*margin: 0 auto; /* Centers the image */
+}
+
+@media only screen and (min-width: 992px) {
+    nav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 67, 139);
+        /* padding-top: 20px; */
+    }
+
+    nav a.icon{
+        display: none;
+    }
+
+    .myLinks {
+        display: block;
+    }
+    
+    nav a {
+        margin-left: 0px;
+        display: block;
+        padding: 15px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+    
+
+
+    header {
+        margin-left: 250px;
+        /* padding: 20px; */
+    }
+
+    main {
+        margin-left: 250px;
+        padding: 20px;
+    }
+    
+    footer {
+        margin-left: 250px;
+        padding: 20px;
+    }
+}
